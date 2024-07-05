@@ -1,0 +1,79 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    :root {
+      --background: 255 255 255;
+      --foreground: 4 8 28;
+    
+      --card: 255 255 255;
+      --card-foreground: 4 8 28;
+    
+      --popover: 255 255 255;
+      --popover-foreground: 4 8 28;
+    
+      --primary: 14 25 45;
+      --primary-foreground: 245 248 255;
+    
+      --secondary: 200 200 200;
+      --secondary-foreground: 14 25 45;
+    
+      --muted: 245 247 250;
+      --muted-foreground: 123 138 170;
+    
+      --accent: 245 247 250;
+      --accent-foreground: 14 25 45;
+    
+      --destructive: 255 71 74;
+      --destructive-foreground: 245 248 255;
+    
+      --border: 231 235 243;
+      --input: 231 235 243;
+      --ring: 4 8 28;
+    
+      --radius: 0.5rem;
+    }
+    
+    .dark {
+      --background: 15 15 15;
+      --foreground: 245 248 255;
+    
+      --card: 4 8 28;
+      --card-foreground: 245 248 255;
+    
+      --popover: 4 8 28;
+      --popover-foreground: 245 248 255;
+    
+      --primary: 245 248 255;
+      --primary-foreground: 14 25 45;
+    
+      --secondary: 47 51 61;
+      --secondary-foreground: 245 248 255;
+    
+      --muted: 47 51 61;
+      --muted-foreground: 145 154 186;
+    
+      --accent: 47 51 61;
+      --accent-foreground: 245 248 255;
+    
+      --destructive: 97 30 32;
+      --destructive-foreground: 245 248 255;
+    
+      --border: 47 51 61;
+      --input: 47 51 61;
+      --ring: 73 90 107;
+    }    
+  }
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+    .flex-center{
+      @apply flex items-center justify-center
+    }
+  }
