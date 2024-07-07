@@ -1,1 +1,25 @@
-{ "TopBar": { "portfolio": "Portfolio" } }
+{
+  "Overlay": {
+    "introduction": "Introduction",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "technologies": "Technologies"
+  },
+  "TopBar": {
+    "portfolio": "Portfolio"
+  },
+  "Introduction": { "presentation": "Beginner Full-Stack Developer." },
+  "About": {
+    "aboutMe": "About Me",
+    "aboutMeDesc": "Beginner Software Developer aspiring to become a FullStack Developer. Knowledgeable in JavaScript, TypeScript, React.js, Next.js, SQL, and ORMs.",
+    "aboutMeDesc2": "I started programming in C in 2022 for microcontrollers. In 2023, I began my undergraduate studies in Computer Science, focusing mostly on basics of Java, OOP, and SQL. At the beginning of 2024, I decided to study Web Development on my own.",
+    "aboutMeStudies": "Courses",
+    "aboutMeIfsc": "Eletronic Technician",
+    "aboutMeIfscDesc": "IFSC, High School/Technician.",
+    "aboutMeIfscDate": "2019/1 --> 2026/2",
+    "aboutMeCiencias": "Computer Science",
+    "aboutMeCienciasDesc": "Estacio, Undergraduate.",
+    "aboutMeCienciasDate": "2019/1 --> 2022-2"
+  }
+}

@@ -1,18 +1,17 @@
 "use client";
-import { useGlobalState } from "@/context/GlobalStateContext";
-import { motion } from "framer-motion";
+import About from "@/components/About";
+import Introduction from "@/components/Introduction";
+import Technologies from "@/components/Technologies";
+import usePageScroll from "@/components/hooks/UsePageScroll";
 
+// Component that represents the entire page.
 export default function Home() {
+  usePageScroll();
   return (
-    <main className=" min-h-[200vh]">
-      <motion.div
-        className="w-20 h-20 bg-red-600 absolute top-[2000]"
-        initial={{ x: 1500, y: 2000 }}
-        whileInView={{ x: 300, y: -500 }}
-        transition={{ duration: 1, bounce: 0.2, type: "spring" }}
-      >
-        Eu gosto de batata
-      </motion.div>
+    <main className="min-h-[200vh] transition-all duration-1000 flex flex-col items-center px-72 gap-20 max-[1700px]:px-40 max-xl:px-20 max-lg:px-6">
+      <Introduction />
+      <About />
+      <Technologies />
     </main>
   );
 }

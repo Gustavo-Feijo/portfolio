@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/themeProvider";
+import ThemeProvider from "@/components/ThemeProvider";
 import TopBar from "@/components/TopBar";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
@@ -37,7 +37,7 @@ export default async function RootLayout({
     <html lang={locale == "en" ? "en" : "pt-br"} suppressHydrationWarning>
       <body
         className={cn(
-          "flex flex-col transition-colors duration-1000",
+          "flex flex-col pt-20 transition-colors duration-1000 overflow-hidden",
           inter.className
         )}
       >

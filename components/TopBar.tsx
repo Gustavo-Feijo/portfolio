@@ -8,11 +8,10 @@ import { motion } from "framer-motion";
 function TopBar({ portfolio }: { portfolio: string }) {
   const { state, toggleOverlay } = useGlobalState();
   return (
-    <motion.nav
-      className="h-20 flex items-center justify-between border-b-2 border-secondary fixed top-0 left-0 right-0 p-10"
+    <motion.header
+      className="h-20 w-[100vw] max-w-full px-10 flex items-center justify-between fixed top-0 left-0 right-0 border-b-2 z-10 transition-colors duration-1000 border-secondary bg-black bg-opacity-50 backdrop-blur-md max-[400px]:px-4"
       initial={{ y: -80 }}
       animate={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 70, damping: 12 }}
     >
       <div className="flex-1">
         {state.overlayOpen ? (
@@ -41,7 +40,7 @@ function TopBar({ portfolio }: { portfolio: string }) {
       <div className="flex-1 flex items-center justify-end">
         <ThemeSwitcher />
       </div>
-    </motion.nav>
+    </motion.header>
   );
 }
 
