@@ -4,65 +4,73 @@
 
 @layer base {
   :root {
-    --background: 255 255 255;
-    --foreground: 4 8 28;
+    --background: 255, 255, 255;
+    --foreground: 4, 8, 28;
 
-    --card: 255 255 255;
-    --card-foreground: 4 8 28;
+    --card: 255, 255, 255;
+    --card-foreground: 4, 8, 28;
 
-    --popover: 255 255 255;
-    --popover-foreground: 4 8 28;
+    --popover: 255, 255, 255;
+    --popover-foreground: 4, 8, 28;
 
-    --primary: 14 25 45;
-    --primary-foreground: 245 248 255;
+    --primary: 14, 25, 45;
+    --primary-foreground: 245, 248, 255;
 
-    --secondary: 200 200 200;
-    --secondary-foreground: 14 25 45;
+    --secondary: 200, 200, 200;
+    --secondary-foreground: 14, 25, 45;
 
-    --muted: 245 247 250;
-    --muted-foreground: 123 138 170;
+    --muted: 245, 247, 250;
+    --muted-foreground: 123, 138, 170;
 
-    --accent: 245 247 250;
-    --accent-foreground: 14 25 45;
+    --accent: 245, 247, 250;
+    --accent-foreground: 14, 25, 45;
 
-    --destructive: 255 71 74;
-    --destructive-foreground: 245 248 255;
+    --destructive: 255, 71, 74;
+    --destructive-foreground: 245, 248, 255;
 
-    --border: 231 235 243;
-    --input: 231 235 243;
-    --ring: 4 8 28;
+    --border: 231, 235, 243;
+    --input: 231, 235, 243;
+    --ring: 4, 8, 28;
 
     --radius: 0.5rem;
+    --mouse-x: 0;
+    --mouse-y: 0;
   }
 
   .dark {
-    --background: 15 15 15;
-    --foreground: 230 230 230;
+    --background: 15, 15, 15;
+    --foreground: 230, 230, 230;
 
-    --card: 4 8 28;
-    --card-foreground: 245 248 255;
+    --card: 4, 8, 28;
+    --card-foreground: 245, 248, 255;
 
-    --popover: 4 8 28;
-    --popover-foreground: 245 248 255;
+    --popover: 4, 8, 28;
+    --popover-foreground: 245, 248, 255;
 
-    --primary: 245 248 255;
-    --primary-foreground: 14 25 45;
+    --primary: 245, 248, 255;
+    --primary-foreground: 14, 25, 45;
 
-    --secondary: 47 51 61;
-    --secondary-foreground: 245 248 255;
+    --secondary: 47, 51, 61;
+    --secondary-foreground: 245, 248, 255;
 
-    --muted: 47 51 61;
-    --muted-foreground: 145 154 186;
+    --muted: 47, 51, 61;
+    --muted-foreground: 145, 154, 186;
 
-    --accent: 47 51 61;
-    --accent-foreground: 245 248 255;
+    --accent: 47, 51, 61;
+    --accent-foreground: 245, 248, 255;
 
-    --destructive: 97 30 32;
-    --destructive-foreground: 245 248 255;
+    --destructive: 97, 30, 32;
+    --destructive-foreground: 245, 248, 255;
 
-    --border: 47 51 61;
-    --input: 47 51 61;
-    --ring: 73 90 107;
+    --border: 47, 51, 61;
+    --input: 47, 51, 61;
+    --ring: 73, 90, 107;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
   }
 }
 
@@ -73,17 +81,20 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer components {
   .border-effect {
     position: relative;
   }
 
   .border-effect::after {
     background: linear-gradient(transparent, purple, transparent);
-    height: 70px;
+    height: 100px;
     width: 1.5px;
     left: -1.5px;
     position: absolute;
-    top: 60%;
+    top: 80%;
     opacity: 0;
     content: "";
     transition: top 600ms ease-in, opacity 600ms ease-in;
@@ -94,7 +105,45 @@
     opacity: 1;
   }
 
-  .flex-center {
-    @apply flex items-center justify-center;
+  .card-effect:hover::before {
+    opacity: 1;
+  }
+  .card-effect::before {
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(var(--foreground), 0.4),
+      transparent 30%
+    );
+    content: "";
+    opacity: 0;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: opacity 500ms;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+  }
+  .dark .card-effect::before {
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(var(--foreground), 0.1),
+      transparent 30%
+    );
+  }
+
+  .bg-pattern {
+    height: 100dvh;
+    width: 100dvw;
+
+    background-image: radial-gradient(rgba(var(--secondary)), transparent 10%);
+    background-position: 0%;
+    background-size: 12vmin 12vmin;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-position: 0;
   }
 }

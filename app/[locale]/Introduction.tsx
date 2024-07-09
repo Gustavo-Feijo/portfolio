@@ -1,8 +1,8 @@
-import TextAnimation from "./TextAnimation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import TextAnimation from "@/components/TextAnimation";
 
 function Introduction() {
   // useState and useEffect for delaying the start of the code.

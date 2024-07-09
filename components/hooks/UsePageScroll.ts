@@ -10,7 +10,6 @@ function scrollPageByDelta(deltaY: number) {
 // Hook for adding a event listner to the wheel that forces the window to scroll by the entire window size.
 function usePageScroll(ref: MutableRefObject<HTMLDivElement | null>) {
   useEffect(() => {
-    console.log("Start scroll behavior.");
     // Keep track of the current state of the screen scroll.
     // A timeout is created to reset the scrolling state every X seconds.
     let isScrolling = false;

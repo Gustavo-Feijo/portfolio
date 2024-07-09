@@ -5,11 +5,7 @@ import ThemeProvider from "@/components/ThemeProvider";
 import TopBar from "@/components/TopBar";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { GlobalStateProvider } from "@/context/GlobalStateContext";
 import Overlay from "@/components/Overlay";
 
