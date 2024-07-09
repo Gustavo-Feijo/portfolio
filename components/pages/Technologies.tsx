@@ -95,7 +95,7 @@ function Technologies() {
           transition: { duration: 0.5, delay: 0.2 },
         }}
         viewport={{ once: true }}
-        className="w-full h-fit max-h-[70dvh] relative border-2 border-secondary bg-[rgba(var(--foreground),0.1)] rounded-2xl shadow-md shadow-secondary flex justify-around flex-wrap p-20 gap-28 border-effect card-effect max-[1200px]:p-10 max-[1200px]:gap-14 max-md:gap-8 max-md:p-4 dark:border"
+        className="w-full h-fit max-h-[70dvh] relative border-2 border-secondary bg-[rgba(var(--foreground),0.1)] rounded-2xl shadow-md shadow-secondary flex justify-around flex-wrap p-20 gap-28 border-effect card-effect max-[1200px]:p-10 max-[1200px]:gap-14 max-md:gap-8 max-md:p-4 dark:border [@media(max-height:900px)]:max-h-[80dvh]"
         ref={cardRef}
       >
         {techList.map((technologie, index) => {

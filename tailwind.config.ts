@@ -19,38 +19,16 @@ const config = {
     },
     extend: {
       colors: {
-        border: "rgb(var(--border))",
-        input: "rgb(var(--input))",
-        ring: "rgb(var(--ring))",
-        background: "rgb(var(--background))",
-        foreground: "rgb(var(--foreground))",
+        border: "hsl(var(--border), <alpha-value>)",
+        background: "hsl(var(--background),<alpha-value>)",
+        foreground: "hsl(var(--foreground), <alpha-value>)",
         primary: {
-          DEFAULT: "rgb(var(--primary))",
-          foreground: "rgb(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--primary), <alpha-value>)",
+          foreground: "hsl(var(--primary-foreground), <alpha-value>)",
         },
         secondary: {
-          DEFAULT: "rgb(var(--secondary))",
-          foreground: "rgb(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "rgb(var(--destructive))",
-          foreground: "rgb(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "rgb(var(--muted))",
-          foreground: "rgb(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "rgb(var(--accent))",
-          foreground: "rgb(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "rgb(var(--popover))",
-          foreground: "rgb(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "rgb(var(--card))",
-          foreground: "rgb(var(--card-foreground))",
+          DEFAULT: "hsl(var(--secondary), <alpha-value>)",
+          foreground: "hsl(var(--secondary-foreground), <alpha-value>)",
         },
       },
       borderRadius: {
