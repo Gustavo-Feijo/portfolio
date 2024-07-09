@@ -21,7 +21,7 @@ function Overlay() {
     <AnimatePresence>
       {state.overlayOpen && (
         <motion.div
-          className="fixed left-0 top-20 h-[calc(100vh-80px)] w-full bg-zinc-950 bg-opacity-20 z-10 backdrop-blur-md overflow-scroll  "
+          className="fixed left-0 top-20 h-[calc(100vh-80px)] w-full bg-zinc-950 bg-opacity-20 z-50 backdrop-blur-md overflow-scroll  "
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.3 }}

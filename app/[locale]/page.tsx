@@ -1,9 +1,9 @@
 "use client";
-import About from "@/app/[locale]/About";
+import About from "@/components/pages/About";
 import usePageScroll from "@/components/hooks/UsePageScroll";
 import { useRef } from "react";
-import Technologies from "./Technologies";
-import Introduction from "./Introduction";
+import Technologies from "@/components/pages/Technologies";
+import Introduction from "@/components/pages/Introduction";
 
 // Component that represents the entire page.
 export default function Home() {
