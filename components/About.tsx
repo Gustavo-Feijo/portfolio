@@ -6,6 +6,8 @@ type AnimateText = {
   text: string;
   delay?: number;
 };
+
+// Main heading for the page. AboutMe and Courses.
 const AnimatedHeading = ({ text, delay = 0 }: AnimateText) => (
   <motion.h1
     initial={{ y: -50, opacity: 0 }}
@@ -17,6 +19,7 @@ const AnimatedHeading = ({ text, delay = 0 }: AnimateText) => (
   </motion.h1>
 );
 
+// Main text for the about me.
 const AnimatedParagraph = ({ text, delay = 0 }: AnimateText) => (
   <motion.p
     className="text-wrap text-lg text-center [@media(max-height:900px)]:text-sm"
@@ -28,6 +31,7 @@ const AnimatedParagraph = ({ text, delay = 0 }: AnimateText) => (
   </motion.p>
 );
 
+// Courses
 const AnimatedItem = ({
   title,
   desc,
@@ -40,7 +44,7 @@ const AnimatedItem = ({
   delay: number;
 }) => (
   <motion.div
-    initial={{ x: 50, opacity: 0 }}
+    initial={{ x: 0, opacity: 0 }}
     whileInView={{ x: 0, opacity: 1, transition: { duration: 1, delay } }}
     viewport={{ once: true }}
   >
@@ -55,8 +59,8 @@ const AnimatedItem = ({
 );
 
 function About() {
+  // Get the translations and creates a array with the two items to be rendered.
   const t = useTranslations("About");
-
   const items = [
     {
       title: t("aboutMeIfsc"),
@@ -73,7 +77,7 @@ function About() {
   ];
 
   return (
-    <section className="w-full min-h-[calc(100vh-80px)] flex items-center justify-around overflow-clip max-lg:flex-col max-lg:justify-center max-lg:gap-8">
+    <section className="w-full min-h-[100dvh]  pt-20 flex items-center justify-around overflow-clip max-lg:flex-col max-lg:justify-center max-lg:gap-8">
       <motion.div className="h-fit w-96 flex flex-col gap-4 items-center justify-around max-[480px]:max-w-80">
         <AnimatedHeading text={t("aboutMe")} />
         <AnimatedParagraph text={t("aboutMeDesc")} />
@@ -86,7 +90,7 @@ function About() {
         className="h-fit w-96 flex flex-col items-center justify-around gap-12 max-[480px]:max-w-80 [@media(max-height:900px)]:gap-8"
       >
         <AnimatedHeading text={t("aboutMeStudies")} delay={0.5} />
-        <div className="flex flex-col gap-14 [@media(max-height:900px)]:gap-8">
+        <div className="flex flex-col gap-14 h-fit [@media(max-height:900px)]:gap-6">
           {items.map((item, index) => (
             <AnimatedItem
               key={index}

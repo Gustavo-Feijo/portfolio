@@ -3,12 +3,16 @@ import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "@/navigation";
 import { useLocale } from "next-intl";
 import React from "react";
+// Array contaning the 2 available locales.
 const locales = [
   { locale: "br", flag: "🇧🇷" },
   { locale: "en", flag: "🇺🇸" },
 ];
+
 function LocaleSwitcher() {
+  // Gets the current locale for highlighting the selected locale.
   const currentLocale = useLocale();
+  // Router and Pathname for changing the locale.
   const router = useRouter();
   const pathname = usePathname();
   return (

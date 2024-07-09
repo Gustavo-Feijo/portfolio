@@ -31,20 +31,21 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   unstable_setRequestLocale(locale);
+
+  //Get the messages for the locales.
   const messages = await getMessages();
-  const t = await getTranslations("TopBar");
   return (
     <html lang={locale == "en" ? "en" : "pt-br"} suppressHydrationWarning>
       <body
         className={cn(
-          "flex flex-col pt-20 transition-colors duration-1000 overflow-hidden",
+          "flex flex-col transition-colors duration-1000 overflow-hidden",
           inter.className
         )}
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="light">
             <GlobalStateProvider>
-              <TopBar portfolio={t("portfolio")} />
+              <TopBar />
               <Overlay />
               {children}
             </GlobalStateProvider>
