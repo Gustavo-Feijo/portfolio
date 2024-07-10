@@ -24,6 +24,7 @@ function TopBar() {
             initial={{ opacity: 0, rotate: 90 }}
             animate={{ opacity: 1, rotate: 0 }}
             transition={{ duration: 0.3 }}
+            data-testid="overlay-close"
             onClick={() => toggleOverlay()}
           >
             <FaTimes className="text-4xl cursor-pointer transition-transform hover:scale-150" />
@@ -34,6 +35,7 @@ function TopBar() {
             initial={{ opacity: 0, rotate: 90 }}
             animate={{ opacity: 1, rotate: 0 }}
             transition={{ duration: 0.3 }}
+            data-testid="overlay-open"
             onClick={() => toggleOverlay()}
           >
             <FaBars className="text-4xl cursor-pointer transition-transform hover:scale-150" />

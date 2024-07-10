@@ -11,6 +11,7 @@ function ThemeSwitcher() {
   return (
     <div
       className="w-20 h-10 rounded-full bg-secondary flex justify-around items-center relative cursor-pointer"
+      data-testid="change-theme"
       onClick={() => {
         setDark(!isDark);
         theme == "light" ? setTheme("dark") : setTheme("light");
