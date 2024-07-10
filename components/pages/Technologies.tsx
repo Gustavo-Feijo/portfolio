@@ -1,20 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { ReactNode, useEffect, useRef } from "react";
 import {
   SiCss3,
-  SiFramer,
   SiHtml5,
   SiJavascript,
-  SiMysql,
   SiNextdotjs,
   SiNodedotjs,
   SiPrisma,
   SiReact,
-  SiReacthookform,
   SiTypescript,
 } from "react-icons/si";
+import { useTranslations } from "next-intl";
+import { ReactNode, useEffect, useRef } from "react";
 import IconCard from "../IconCard";
 
 // Type to be passed to the Icon Card.
@@ -73,7 +70,7 @@ function Technologies() {
   }, []);
 
   return (
-    <section className="w-full min-h-[100dvh] pt-20 flex flex-col gap-8 items-center justify-center overflow-clip max-lg:flex-col max-lg:justify-center max-lg:gap-8">
+    <section className=" min-h-[100dvh] pt-20 flex-center flex-col gap-8">
       <motion.span
         initial={{ y: -25, x: 25, opacity: 0 }}
         whileInView={{
@@ -95,7 +92,8 @@ function Technologies() {
           transition: { duration: 0.5, delay: 0.2 },
         }}
         viewport={{ once: true }}
-        className="w-full h-fit max-h-[70dvh] relative border-2 border-secondary bg-[rgba(var(--foreground),0.1)] rounded-2xl shadow-md shadow-secondary flex justify-around flex-wrap p-20 gap-28 border-effect card-effect max-[1200px]:p-10 max-[1200px]:gap-14 max-md:gap-8 max-md:p-4 dark:border [@media(max-height:900px)]:max-h-[80dvh]"
+        className="flex justify-around flex-wrap max-h-[80dvh] border-2 border-secondary border-opacity-25 rounded-2xl shadow-lg shadow-secondary p-20 gap-28 border-effect card-effect 
+        max-[1350px]:p-10 max-[1350px]:gap-14 max-md:gap-4 max-md:p-4"
         ref={cardRef}
       >
         {techList.map((technologie, index) => {

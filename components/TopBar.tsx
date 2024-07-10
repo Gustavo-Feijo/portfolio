@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import ThemeSwitcher from "./ThemeSwitcher";
-import { useGlobalState } from "@/context/GlobalStateContext";
 import { motion } from "framer-motion";
+import { useGlobalState } from "@/context/GlobalStateContext";
 import { useTranslations } from "next-intl";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 //Function to render the topbar, containing a theme switcher and a simple menu button.
 function TopBar() {
@@ -13,7 +13,7 @@ function TopBar() {
   const t = useTranslations("TopBar");
   return (
     <motion.header
-      className="h-20 w-[100vw] max-w-full px-10 flex items-center fixed top-0 left-0 right-0 border-b-2 z-10 transition-colors duration-1000 border-secondary bg-black bg-opacity-50 backdrop-blur-md max-[400px]:px-4"
+      className="h-20 w-[100vw] px-10 flex items-center fixed border-secondary border-b-2 z-10 transition-colors duration-1000  bg-black bg-opacity-50 backdrop-blur-md max-[400px]:px-4"
       initial={{ y: -80 }}
       animate={{ y: 0 }}
     >
@@ -26,7 +26,7 @@ function TopBar() {
             transition={{ duration: 0.3 }}
             onClick={() => toggleOverlay()}
           >
-            <FaTimes className="text-4xl cursor-pointer transition-transform duration-200 hover:scale-150" />
+            <FaTimes className="text-4xl cursor-pointer transition-transform hover:scale-150" />
           </motion.div>
         ) : (
           <motion.div
@@ -36,7 +36,7 @@ function TopBar() {
             transition={{ duration: 0.3 }}
             onClick={() => toggleOverlay()}
           >
-            <FaBars className="text-4xl cursor-pointer transition-transform duration-200 hover:scale-150" />
+            <FaBars className="text-4xl cursor-pointer transition-transform hover:scale-150" />
           </motion.div>
         )}
       </div>

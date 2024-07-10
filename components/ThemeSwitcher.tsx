@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useTheme } from "next-themes";
+
+// Component for switching the theme.
 function ThemeSwitcher() {
   const [isDark, setDark] = useState(true);
   const { setTheme, theme } = useTheme();

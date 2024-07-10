@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "@/navigation";
 import { useLocale } from "next-intl";
-import React from "react";
 // Array contaning the 2 available locales.
 const locales = [
   { locale: "br", flag: "🇧🇷" },

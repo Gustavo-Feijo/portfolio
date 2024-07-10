@@ -1,6 +1,6 @@
 "use client";
-import { useGlobalState } from "@/context/GlobalStateContext";
 import { AnimatePresence, motion } from "framer-motion";
+import { useGlobalState } from "@/context/GlobalStateContext";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "./LocaleSwitcher";
 
@@ -21,14 +21,14 @@ function Overlay() {
     <AnimatePresence>
       {state.overlayOpen && (
         <motion.div
-          className="fixed left-0 top-20 h-[calc(100vh-80px)] w-full bg-zinc-950 bg-opacity-20 z-50 backdrop-blur-md overflow-scroll  "
+          className="fixed top-20 h-[calc(100vh-80px)] w-full bg-zinc-950 bg-opacity-40 z-50 backdrop-blur-md"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.3 }}
           exit={{ scale: 0 }}
           key="Overlay"
         >
-          <nav className="flex flex-col gap-16 items-center pt-10 max-lg:gap-12">
+          <nav className="flex flex-col items-center pt-10 gap-16 max-lg:gap-12">
             <LocaleSwitcher />
             {buttonText.map((button, index) => (
               <motion.button

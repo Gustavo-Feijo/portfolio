@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ThemeProvider from "@/components/ThemeProvider";
-import TopBar from "@/components/TopBar";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { GlobalStateProvider } from "@/context/GlobalStateContext";
+import ThemeProvider from "@/components/ThemeProvider";
 import Overlay from "@/components/Overlay";
+import TopBar from "@/components/TopBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,7 +39,7 @@ export default async function RootLayout({
         )}
       >
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="light">
+          <ThemeProvider attribute="class" defaultTheme="dark">
             <GlobalStateProvider>
               <TopBar />
               <Overlay />
