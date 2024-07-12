@@ -9,6 +9,7 @@ import ThemeProvider from "@/components/ThemeProvider";
 import Overlay from "@/components/Overlay";
 import TopBar from "@/components/TopBar";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -45,6 +46,7 @@ export default async function RootLayout({
               <Overlay />
               {children}
               <Analytics />
+              <SpeedInsights />
             </GlobalStateProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
