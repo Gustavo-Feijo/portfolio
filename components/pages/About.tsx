@@ -77,7 +77,7 @@ function About() {
   ];
 
   return (
-    <section className="w-full min-h-[100dvh]  pt-20 flex items-center justify-around max-lg:flex-col max-lg:justify-center max-lg:gap-8">
+    <section className="w-full min-h-[100dvh] pt-20 flex items-center justify-around max-lg:flex-col max-lg:justify-center max-lg:gap-8">
       <motion.div className="h-fit w-96 flex flex-col gap-4 items-center justify-around max-[480px]:max-w-80">
         <AnimatedHeading text={t("aboutMe")} />
         <AnimatedParagraph text={t("aboutMeDesc")} />

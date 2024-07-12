@@ -8,7 +8,7 @@ import { GlobalStateProvider } from "@/context/GlobalStateContext";
 import ThemeProvider from "@/components/ThemeProvider";
 import Overlay from "@/components/Overlay";
 import TopBar from "@/components/TopBar";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "Gustavo Feijo Porfolio",
 };
 export function generateStaticParams() {
-  const locales = ["en", "br"];
+  const locales = ["br", "en"];
   return locales.map((locale) => ({ locale }));
 }
 export default async function RootLayout({
@@ -44,6 +44,7 @@ export default async function RootLayout({
               <TopBar />
               <Overlay />
               {children}
+              <Analytics />
             </GlobalStateProvider>
           </ThemeProvider>
         </NextIntlClientProvider>

@@ -7,6 +7,7 @@ function scrollPageByDelta(deltaY: number) {
     behavior: "smooth",
   });
 }
+
 // Hook for adding a event listner to the wheel that forces the window to scroll by the entire window size.
 function usePageScroll(ref: MutableRefObject<HTMLDivElement | null>) {
   useEffect(() => {
@@ -17,7 +18,7 @@ function usePageScroll(ref: MutableRefObject<HTMLDivElement | null>) {
 
     // Function to reset the scroll state.
     function resetScroll() {
-      timeout = setTimeout(() => (isScrolling = false), 400);
+      timeout = setTimeout(() => (isScrolling = false), 500);
     }
 
     // Function to handle wheel events.
@@ -55,7 +56,9 @@ function usePageScroll(ref: MutableRefObject<HTMLDivElement | null>) {
       if (isScrolling) return;
       isScrolling = true;
       const deltaY = startY - lastY;
-      scrollPageByDelta(deltaY);
+      if (deltaY > 50 || deltaY < -50) {
+        scrollPageByDelta(deltaY);
+      }
       resetScroll();
     };
 

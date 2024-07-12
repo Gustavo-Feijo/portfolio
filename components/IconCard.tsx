@@ -17,12 +17,14 @@ function IconCard(tech: { icon: ReactNode; name: string; delay?: number }) {
       whileHover={{ scale: 1.2 }}
       viewport={{ once: true }}
       className="h-40 w-32  bg-foreground bg-opacity-15 shadow-primary shadow-md border-2 border-secondary rounded-xl flex-center flex-col  z-20 transition-colors text-7xl
-      max-lg:h-32 max-lg:w-24 max-lg:text-5xl hover:text-primary hover:border-primary hover:border-opacity-20 "
+      max-lg:h-32 max-lg:w-24 max-lg:text-5xl hover:text-primary hover:border-primary hover:border-opacity-20 [@media(max-height:800px)]:h-24 [@media(max-height:800px)]:w-20 [@media(max-height:800px)]:text-4xl  "
     >
-      <span className="text-2xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] max-lg:text-lg">
+      <span className="text-2xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] max-lg:text-lg [@media(max-height:800px)]:text-sm">
         {tech.name}
       </span>
-      {tech.icon}
+      <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+        {tech.icon}
+      </span>
     </motion.div>
   );
 }

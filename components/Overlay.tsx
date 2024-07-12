@@ -32,7 +32,7 @@ function Overlay() {
             <LocaleSwitcher />
             {buttonText.map((button, index) => (
               <motion.button
-                className="p-2 text-5xl hover:text-secondary max-lg:text-3xl"
+                className="p-2 text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-secondary max-lg:text-3xl"
                 whileHover={{
                   scale: 1.2,
                   transition: {
@@ -43,7 +43,7 @@ function Overlay() {
                   toggleOverlay();
                   // Scrolls the entire screen by the index position * the height of the window.
                   window.scrollTo({
-                    top: window.innerHeight * index + 1,
+                    top: window.innerHeight * (index + 1),
                     behavior: "smooth",
                   });
                 }}

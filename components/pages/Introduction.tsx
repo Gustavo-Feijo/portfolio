@@ -26,10 +26,10 @@ function Introduction() {
   }, []);
 
   return (
-    <section className="w-full flex justify-around items-center min-h-[100dvh] pt-20 overflow-clip">
+    <section className="w-full flex justify-around items-center min-h-[100dvh] pt-20 ">
       {start && (
         <>
-          <div className="max-w-[500px] w-[500px] h-[360px] flex flex-col justify-start max-2xl:w-full max-lg:max-w-[300px]  max-lg:h-[180px]">
+          <div className="max-w-[500px] w-[500px] h-[360px] flex flex-col justify-start max-2xl:w-full max-lg:max-w-[300px] max-lg:h-[180px]">
             <TextAnimation
               text="Gustavo Feijó"
               className="h-72 text-9xl text-wrap transition-all duration-1000 drop-shadow-[0_6px_20px_hsl(var(--primary),0.4)] max-[1100px]:text-8xl max-lg:text-7xl max-lg:h-fit max-md:text-5xl max-sm:text-4xl"

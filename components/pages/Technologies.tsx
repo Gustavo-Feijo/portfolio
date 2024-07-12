@@ -4,10 +4,12 @@ import {
   SiCss3,
   SiHtml5,
   SiJavascript,
+  SiJest,
   SiNextdotjs,
   SiNodedotjs,
   SiPrisma,
   SiReact,
+  SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 import { useTranslations } from "next-intl";
@@ -31,6 +33,8 @@ const techList: Technology[] = [
   { icon: <SiReact />, name: "React.JS" },
   { icon: <SiNextdotjs />, name: "Next.JS" },
   { icon: <SiPrisma />, name: "Prisma" },
+  { icon: <SiJest />, name: "Jest" },
+  { icon: <SiTailwindcss />, name: "Tailwind" },
 ];
 
 // Function to return the page of the technologies.
@@ -70,7 +74,7 @@ function Technologies() {
   }, []);
 
   return (
-    <section className=" min-h-[100dvh] pt-20 flex-center flex-col gap-8">
+    <section className=" min-h-[100dvh] max-h-[100dvh] pt-20 flex-center flex-col gap-8 [@media(max-height:800px)]:gap-2">
       <motion.span
         initial={{ y: -25, x: 25, opacity: 0 }}
         whileInView={{
@@ -80,7 +84,7 @@ function Technologies() {
           transition: { duration: 1, delay: 0.2 },
         }}
         viewport={{ once: true }}
-        className="text-7xl max-sm:text-5xl"
+        className="text-7xl max-sm:text-5xl [@media(max-height:900px)]:text-5xl"
       >
         {t("title")}
       </motion.span>
@@ -93,7 +97,7 @@ function Technologies() {
         }}
         viewport={{ once: true }}
         className="flex justify-around flex-wrap max-h-[80dvh] border-2 border-secondary border-opacity-25 rounded-2xl shadow-lg shadow-secondary p-20 gap-28 border-effect card-effect 
-        max-[1350px]:p-10 max-[1350px]:gap-14 max-md:gap-4 max-md:p-4"
+        max-[1350px]:p-10 max-[1350px]:gap-14 max-md:gap-4 max-md:p-4 [@media(max-height:800px)]:max-h-[80dvh] [@media(max-height:800px)]:p-4"
         ref={cardRef}
       >
         {techList.map((technologie, index) => {

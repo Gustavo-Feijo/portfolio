@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useGlobalState } from "@/context/GlobalStateContext";
@@ -13,7 +12,7 @@ function TopBar() {
   const t = useTranslations("TopBar");
   return (
     <motion.header
-      className="h-20 w-[100vw] px-10 flex items-center fixed border-secondary border-b-2 z-10 transition-colors duration-1000  bg-black bg-opacity-50 backdrop-blur-md max-[400px]:px-4"
+      className="h-20 w-[100vw] px-10 flex items-center fixed border-secondary border-b-2 z-50 transition-colors duration-1000  bg-black bg-opacity-50 backdrop-blur-md max-[450px]:px-2"
       initial={{ y: -80 }}
       animate={{ y: 0 }}
     >
@@ -42,7 +41,9 @@ function TopBar() {
           </motion.div>
         )}
       </div>
-      <p className="text-5xl tracking-wider">{t("portfolio")}</p>
+      <p className="text-5xl tracking-wider font-mono max-[450px]:tracking-tight ">
+        {t("portfolio")}
+      </p>
       <div className="flex-1 flex items-center justify-end">
         <ThemeSwitcher />
       </div>

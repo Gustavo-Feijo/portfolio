@@ -6,7 +6,7 @@ import { GlobalStateProvider } from "@/context/GlobalStateContext";
 import Overlay from "../Overlay";
 import TopBar from "../TopBar";
 import { ReactNode } from "react";
-import ThemeProvider from "../ThemeProvider";
+import "@/app/[locale]/global.css";
 
 jest.mock("next/navigation", () => ({
   usePathname: () => "/",
@@ -21,20 +21,6 @@ jest.mock("next/navigation", () => ({
   useParams: () => ({ locale: "br" }),
   useSelectedLayoutSegment: () => ({ locale: "br" }),
 }));
-
-Object.defineProperty(window, "matchMedia", {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // Deprecated
-    removeListener: jest.fn(), // Deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
 
 function RenderSetup(children?: ReactNode) {
   render(
@@ -66,15 +52,9 @@ describe("TopBar", () => {
     expect(overlay).toBeInTheDocument();
   });
 
-  it("Should change the theme", async () => {
-    RenderSetup(
-      <ThemeProvider attribute="class" defaultTheme="dark">
-        <TopBar />
-      </ThemeProvider>
-    );
-    const themeSwitch = screen.getByTestId("change-theme");
-    expect(themeSwitch).toBeInTheDocument();
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-    console.log(window.getComputedStyle(themeSwitch).backgroundColor);
+  it("Should render the theme switcher.", () => {
+    RenderSetup(<TopBar />);
+    const themeSwitcher = screen.getByTestId("change-theme");
+    expect(themeSwitcher).toBeInTheDocument();
   });
 });
