@@ -42,11 +42,10 @@ const projectList: ProjectData[] = [
       { icon: <SiJest />, name: "Jest" },
     ],
     links: [
-      { icon: <SiGithub />, link: "https://www.github.com", text: "GitHub" },
       {
-        icon: <SiLinkedin />,
-        link: "https://www.linkedin.com",
-        text: "Linkedin",
+        icon: <SiGithub />,
+        link: "https://github.com/Gustavo-Feijo/portfolio",
+        text: "GitHub",
       },
       { icon: <SiYoutube />, link: "https://www.youtube.com", text: "Youtube" },
       { icon: <TbWorld />, link: "https://www.google.com", text: "Website" },
@@ -57,7 +56,11 @@ const projectList: ProjectData[] = [
     projectImage: "Todo.png",
     technologies: [],
     links: [
-      { icon: <SiGithub />, link: "https://github.com/Gustavo-Feijo", text: "GitHub" },
+      {
+        icon: <SiGithub />,
+        link: "https://github.com/Gustavo-Feijo",
+        text: "GitHub",
+      },
       {
         icon: <SiLinkedin />,
         link: "https://www.linkedin.com/in/gustavo-feij%C3%B3-0767ab1b0/",

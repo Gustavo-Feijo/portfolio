@@ -66,11 +66,11 @@ export default async function RootLayout({
               <TopBar />
               <Overlay />
               {children}
-              <Analytics />
-              <SpeedInsights />
             </GlobalStateProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
