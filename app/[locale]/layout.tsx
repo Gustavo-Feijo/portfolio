@@ -13,8 +13,29 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Gustavo Feijo Porfolio",
+  title: "Portfolio - Gustavo Feijo",
+  description: "Gustavo Feijo's Portfolio",
+  authors: [{ name: "Gustavo Feijo" }],
+  creator: "Gustavo Feijo",
+  robots: { index: true, follow: true },
+  keywords: [
+    "Gustavo",
+    "Feijo",
+    "Portfolio",
+    "Dev",
+    "Programador",
+    "Desenvolvedor",
+  ],
+  openGraph: {
+    type: "website",
+    title: "Portfolio - Gustavo Feijo",
+    description: "Gustavo's Feijo Portfolio",
+  },
+  twitter: {
+    title: "Portfolio - Gustavo Feijo",
+    description: "Gustavo's Feijo Portfolio",
+    creator: "Gustavo Feijo",
+  },
 };
 export function generateStaticParams() {
   const locales = ["br", "en"];
@@ -32,7 +53,7 @@ export default async function RootLayout({
   //Get the messages for the locales.
   const messages = await getMessages();
   return (
-    <html lang={locale == "en" ? "en" : "pt-br"} suppressHydrationWarning>
+    <html lang={locale == "en" ? "en" : "pt-BR"} suppressHydrationWarning>
       <body
         className={cn(
           "flex flex-col transition-colors duration-1000 overflow-hidden",
