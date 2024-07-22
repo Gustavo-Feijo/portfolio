@@ -53,7 +53,9 @@ function usePageScroll(ref: MutableRefObject<HTMLDivElement | null>) {
 
     // Do the scrolling based on the start and last movement values.
     const handleTouchEnd = (): void => {
-      if (isScrolling) return;
+      if (isScrolling) {
+        return;
+      }
       isScrolling = true;
       const deltaY = startY - lastY;
       if (deltaY > 50 || deltaY < -50) {

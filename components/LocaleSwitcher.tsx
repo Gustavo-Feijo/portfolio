@@ -20,10 +20,7 @@ function LocaleSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <div
-      className="w-fit h-10 rounded-sm p-2 gap-2 border border-secondary flex items-center cursor-pointer"
-      onClick={() => {}}
-    >
+    <div className="w-fit h-10 rounded-sm p-2 gap-2 border border-secondary flex items-center cursor-pointer">
       {locales.map((locale, index) => (
         <span
           key={index}

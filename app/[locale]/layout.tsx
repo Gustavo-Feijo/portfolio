@@ -10,6 +10,7 @@ import Overlay from "@/components/Overlay";
 import TopBar from "@/components/TopBar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { locales } from "@/config";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -38,7 +39,6 @@ export const metadata: Metadata = {
   },
 };
 export function generateStaticParams() {
-  const locales = ["br", "en"];
   return locales.map((locale) => ({ locale }));
 }
 export default async function RootLayout({

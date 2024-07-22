@@ -6,8 +6,9 @@ import { useTheme } from "next-themes";
 
 // Component for switching the theme.
 function ThemeSwitcher() {
-  const [isDark, setDark] = useState(true);
   const { setTheme, theme } = useTheme();
+  const [isDark, setDark] = useState(theme == "dark");
+
   return (
     <div
       className="w-20 h-10 rounded-full bg-secondary flex justify-around items-center relative cursor-pointer"

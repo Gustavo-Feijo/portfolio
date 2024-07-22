@@ -2,13 +2,12 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
 const GlobalState = createContext({
-  state: { overlayOpen: false, scrollY: 0 },
+  state: { overlayOpen: false },
   toggleOverlay: () => {},
-  setScrollY: (y: number) => {},
 });
 
 export function GlobalStateProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState({ overlayOpen: false, scrollY: 0 });
+  const [state, setState] = useState({ overlayOpen: false });
 
   function toggleOverlay() {
     setState((prevState) => ({
@@ -16,12 +15,9 @@ export function GlobalStateProvider({ children }: { children: ReactNode }) {
       overlayOpen: !prevState.overlayOpen,
     }));
   }
-  function setScrollY(y: number) {
-    setState((prevState) => ({ ...prevState, scrollY: y }));
-  }
 
   return (
-    <GlobalState.Provider value={{ state, toggleOverlay, setScrollY }}>
+    <GlobalState.Provider value={{ state, toggleOverlay }}>
       {children}
     </GlobalState.Provider>
   );

@@ -65,7 +65,7 @@ function About() {
     {
       title: t("ifsc"),
       desc: t("ifscDesc"),
-      date: t("cienciasDate"),
+      date: t("ifscDate"),
       delay: 0.5,
     },
     {

@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main
       ref={ref}
-      className="min-h-[200vh] transition-all duration-1000 overflow-hidden flex flex-col items-center px-72 max-[1700px]:px-40 max-xl:px-20 max-lg:px-6"
+      className="transition-all duration-1000 overflow-hidden flex flex-col items-center px-72 max-[1700px]:px-40 max-xl:px-20 max-lg:px-6"
     >
       <Introduction />
       <About />
