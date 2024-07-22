@@ -2,8 +2,13 @@
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "@/navigation";
 import { useLocale } from "next-intl";
+
+interface LocaleList {
+  locale: "br" | "en";
+  flag: string;
+}
 // Array contaning the 2 available locales.
-const locales = [
+const locales: LocaleList[] = [
   { locale: "br", flag: "🇧🇷" },
   { locale: "en", flag: "🇺🇸" },
 ];
@@ -27,7 +32,7 @@ function LocaleSwitcher() {
             currentLocale != locale.locale && "opacity-30"
           )}
           onClick={() => {
-            if (currentLocale != locale.locale) {
+            if (currentLocale !== locale.locale) {
               router.push(pathname, { locale: locale.locale });
             }
           }}

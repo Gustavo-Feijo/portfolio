@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
-
-//List of available locales.
-const locales = ["br", "en"];
+import { locales } from "@/config";
 
 export default getRequestConfig(async ({ locale }) => {
   // Validate that the incoming `locale` parameter is valid

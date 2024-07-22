@@ -7,7 +7,7 @@ type AnimateText = {
   delay?: number;
 };
 
-// Main heading for the page. AboutMe and Courses.
+// Main heading for the page. AboutMe  and Courses.
 const AnimatedHeading = ({ text, delay = 0 }: AnimateText) => (
   <motion.h1
     initial={{ y: -50, opacity: 0 }}
@@ -63,15 +63,15 @@ function About() {
   const t = useTranslations("About");
   const items = [
     {
-      title: t("aboutMeIfsc"),
-      desc: t("aboutMeIfscDesc"),
-      date: t("aboutMeCienciasDate"),
+      title: t("ifsc"),
+      desc: t("ifscDesc"),
+      date: t("cienciasDate"),
       delay: 0.5,
     },
     {
-      title: t("aboutMeCiencias"),
-      desc: t("aboutMeCienciasDesc"),
-      date: t("aboutMeCienciasDate"),
+      title: t("ciencias"),
+      desc: t("cienciasDesc"),
+      date: t("cienciasDate"),
       delay: 0.8,
     },
   ];
@@ -80,8 +80,8 @@ function About() {
     <section className="w-full min-h-[100dvh] pt-20 flex items-center justify-around max-lg:flex-col max-lg:justify-center max-lg:gap-8">
       <motion.div className="h-fit w-96 flex flex-col gap-4 items-center justify-around max-[480px]:max-w-80">
         <AnimatedHeading text={t("aboutMe")} />
-        <AnimatedParagraph text={t("aboutMeDesc")} />
-        <AnimatedParagraph text={t("aboutMeDesc2")} delay={1} />
+        <AnimatedParagraph text={t("desc")} />
+        <AnimatedParagraph text={t("desc2")} delay={1} />
       </motion.div>
       <motion.div
         initial={{ x: 100, opacity: 0 }}
@@ -89,7 +89,7 @@ function About() {
         viewport={{ once: true }}
         className="h-fit w-96 flex flex-col items-center justify-around gap-12 max-[480px]:max-w-80 [@media(max-height:900px)]:gap-8"
       >
-        <AnimatedHeading text={t("aboutMeStudies")} delay={0.5} />
+        <AnimatedHeading text={t("studies")} delay={0.5} />
         <div className="flex flex-col gap-14 h-fit [@media(max-height:900px)]:gap-6">
           {items.map((item, index) => (
             <AnimatedItem

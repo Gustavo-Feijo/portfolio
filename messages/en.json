@@ -1,15 +1,15 @@
 {
   "About": {
     "aboutMe": "About Me",
-    "aboutMeCiencias": "Computer Science",
-    "aboutMeCienciasDate": "2023-1 --> 2026-2",
-    "aboutMeCienciasDesc": "Estácio, Undergraduate.",
-    "aboutMeDesc": "Software Developer aspiring to become a Full-Stack Developer. Knowledgeable in JavaScript, TypeScript, React.js, Next.js, SQL, and ORMs.",
-    "aboutMeDesc2": "I started programming in C in 2022 for microcontrollers. In 2023, I began my undergraduate studies in Computer Science, focusing mainly on the basics of Java, OOP, and SQL. At the beginning of 2024, I decided to study Web Development on my own.",
-    "aboutMeIfsc": "Electronic Technician",
-    "aboutMeIfscDate": "2019/1 --> 2022/2",
-    "aboutMeIfscDesc": "IFSC, High School/Technician.",
-    "aboutMeStudies": "Courses"
+    "ciencias": "Computer Science",
+    "cienciasDate": "2023-1 --> 2026-2",
+    "cienciasDesc": "Estácio, Undergraduate.",
+    "desc": "Software Developer aspiring to become a Full-Stack Developer. Knowledgeable in JavaScript, TypeScript, React.js, Next.js, SQL, and ORMs.",
+    "desc2": "I started programming in C in 2022 for microcontrollers. In 2023, I began my undergraduate studies in Computer Science, focusing mainly on the basics of Java, OOP, and SQL. At the beginning of 2024, I decided to study Web Development on my own.",
+    "ifsc": "Electronic Technician",
+    "ifscDate": "2019/1 --> 2022/2",
+    "ifscDesc": "IFSC, High School/Technician.",
+    "studies": "Courses"
   },
   "Contact": {
     "info": "Currently searching for a job opportunity in programming. Willing to learn any technology.",

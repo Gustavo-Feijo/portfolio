@@ -1,15 +1,15 @@
 {
   "About": {
     "aboutMe": "Sobre mim",
-    "aboutMeCiencias": "Ciências da Computação",
-    "aboutMeCienciasDate": "2023-1 --> 2026-2",
-    "aboutMeCienciasDesc": "Estacio, Graduação.",
-    "aboutMeDesc": "Desenvolvedor de software, buscando se tornar FullStack. Conhecimentos em JavaScript, TypeScript, React.js, Next.js, SQL e ORMs.",
-    "aboutMeDesc2": "Comecei a programar em 2022, com C para microcontroladores. Em 2023, comecei minha graduação em Ciências da Computação, focando mais nos fundamentos de Java, POO e SQL. No início de 2024, decidi estudar Desenvolvimento Web por conta própria.",
-    "aboutMeIfsc": "Técnico em Eletrônica",
-    "aboutMeIfscDate": "2019/1 --> 2022/2",
-    "aboutMeIfscDesc": "IFSC, Médio/Técnico.",
-    "aboutMeStudies": "Cursos"
+    "ciencias": "Ciências da Computação",
+    "cienciasDate": "2023-1 --> 2026-2",
+    "cienciasDesc": "Estacio, Graduação.",
+    "desc": "Desenvolvedor de software, buscando se tornar FullStack. Conhecimentos em JavaScript, TypeScript, React.js, Next.js, SQL e ORMs.",
+    "desc2": "Comecei a programar em 2022, com C para microcontroladores. Em 2023, comecei minha graduação em Ciências da Computação, focando mais nos fundamentos de Java, POO e SQL. No início de 2024, decidi estudar Desenvolvimento Web por conta própria.",
+    "ifsc": "Técnico em Eletrônica",
+    "ifscDate": "2019/1 --> 2022/2",
+    "ifscDesc": "IFSC, Médio/Técnico.",
+    "studies": "Cursos"
   },
   "Contact": {
     "info": "Atualmente buscando uma oportunidade de emprego na área de programação, disposto a me adaptar e aprender qualquer tecnologia requerida.",
