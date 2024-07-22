@@ -55,11 +55,11 @@ function Introduction() {
             className="aspect-square flex-center max-lg:scale-75"
           >
             <Image
-              src="/eu.jpg"
+              src="/eu3.jpg"
               alt="Eu"
               width={400}
               height={400}
-              className="rounded-full flex-1 transition-transform duration-1000 "
+              className="rounded-full flex-1 transition-transform duration-1000 image-test"
             />
           </motion.div>
         </>

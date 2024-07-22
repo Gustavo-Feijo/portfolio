@@ -53,20 +53,14 @@ const projectList: ProjectData[] = [
     ],
   },
   {
-    translation: "ProjectPortfolio",
-    projectImage: "Portfolio.png",
-    technologies: [
-      { icon: <SiReact />, name: "React" },
-      { icon: <SiNextdotjs />, name: "Next.js" },
-      { icon: <SiTailwindcss />, name: "Tailwind" },
-      { icon: <TbBrandFramerMotion />, name: "Motion" },
-      { icon: <SiJest />, name: "Jest" },
-    ],
+    translation: "ToDo",
+    projectImage: "Todo.png",
+    technologies: [],
     links: [
-      { icon: <SiGithub />, link: "https://www.github.com", text: "GitHub" },
+      { icon: <SiGithub />, link: "https://github.com/Gustavo-Feijo", text: "GitHub" },
       {
         icon: <SiLinkedin />,
-        link: "https://www.linkedin.com",
+        link: "https://www.linkedin.com/in/gustavo-feij%C3%B3-0767ab1b0/",
         text: "Linkedin",
       },
       { icon: <SiYoutube />, link: "https://www.youtube.com", text: "Youtube" },
