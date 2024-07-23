@@ -15,7 +15,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio - Gustavo Feijo",
-  description: "Gustavo Feijo's Portfolio",
+  description:
+    "Welcome to my portfolio, here you can see details about me, my curriculum, contacts and my projects.",
   authors: [{ name: "Gustavo Feijo" }],
   creator: "Gustavo Feijo",
   robots: { index: true, follow: true },
@@ -26,6 +27,12 @@ export const metadata: Metadata = {
     "Dev",
     "Programador",
     "Desenvolvedor",
+    "Typescript",
+    "Javascript",
+    "Programador",
+    "Junior",
+    "Portfólio",
+    "Curriculo",
   ],
   openGraph: {
     type: "website",
