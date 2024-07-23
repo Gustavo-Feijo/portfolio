@@ -55,7 +55,7 @@ function Introduction() {
             className="aspect-square flex-center max-lg:scale-75"
           >
             <Image
-              src="/eu3.jpg"
+              src="/GustavoF.jpg"
               alt="Eu"
               width={400}
               height={400}

@@ -31,11 +31,13 @@ export const metadata: Metadata = {
     type: "website",
     title: "Portfolio - Gustavo Feijo",
     description: "Gustavo's Feijo Portfolio",
+    url: "https://gustavofeijo.vercel.app/br",
   },
   twitter: {
     title: "Portfolio - Gustavo Feijo",
     description: "Gustavo's Feijo Portfolio",
     creator: "Gustavo Feijo",
+    site: "https://gustavofeijo.vercel.app/br",
   },
 };
 export function generateStaticParams() {

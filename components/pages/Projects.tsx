@@ -47,8 +47,16 @@ const projectList: ProjectData[] = [
         link: "https://github.com/Gustavo-Feijo/portfolio",
         text: "GitHub",
       },
-      { icon: <SiYoutube />, link: "https://www.youtube.com", text: "Youtube" },
-      { icon: <TbWorld />, link: "https://www.google.com", text: "Website" },
+      {
+        icon: <SiYoutube />,
+        link: "https://youtu.be/N8XMmr7jeX0",
+        text: "Youtube",
+      },
+      {
+        icon: <TbWorld />,
+        link: "https://gustavofeijo.vercel.app/br",
+        text: "Website",
+      },
     ],
   },
   {
@@ -66,8 +74,16 @@ const projectList: ProjectData[] = [
         link: "https://www.linkedin.com/in/gustavo-feij%C3%B3-0767ab1b0/",
         text: "Linkedin",
       },
-      { icon: <SiYoutube />, link: "https://www.youtube.com", text: "Youtube" },
-      { icon: <TbWorld />, link: "https://www.google.com", text: "Website" },
+      {
+        icon: <SiYoutube />,
+        link: "https://www.youtube.com/@GustavoFeij%C3%B3Dev",
+        text: "Youtube",
+      },
+      {
+        icon: <TbWorld />,
+        link: "https://gustavofeijo.vercel.app/br",
+        text: "Website",
+      },
     ],
   },
 ];
