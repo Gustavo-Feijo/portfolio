@@ -107,7 +107,7 @@ function Projects() {
         {t("title")}
       </motion.h1>
       <div
-        className="flex items-start justify-around flex-wrap gap-8 w-full border border-secondary border-opacity-30 rounded-xl h-[60dvh] max-h-[60dvh] overflow-y-scroll overflow-x-hidden"
+        className="flex items-start justify-around flex-wrap gap-8 w-full border border-secondary border-opacity-30 pt-4 shadow-lg shadow-secondary rounded-xl h-[60dvh] max-h-[60dvh] overflow-y-scroll overflow-x-hidden"
         ref={ref}
       >
         {projectList.map((project, index) => (

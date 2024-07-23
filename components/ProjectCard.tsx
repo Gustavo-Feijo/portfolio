@@ -97,22 +97,24 @@ function ProjectCard(project: ProjectData) {
             }}
             className="flex w-full px-8"
           >
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline">Tech</Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background">
-                {project.technologies.map((tech, index) => (
-                  <DropdownMenuItem
-                    className="flex gap-2 text-base text-primary "
-                    key={index}
-                  >
-                    <span> {tech.icon}</span>
-                    <span className="text-foreground">{tech.name}</span>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {project.technologies.length > 0 && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline">Tech</Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-background">
+                  {project.technologies.map((tech, index) => (
+                    <DropdownMenuItem
+                      className="flex gap-2 text-base text-primary "
+                      key={index}
+                    >
+                      <span> {tech.icon}</span>
+                      <span className="text-foreground">{tech.name}</span>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
             <div className="flex flex-1 justify-around items-center">
               {project.links?.map((link, index) => (
                 <Link
