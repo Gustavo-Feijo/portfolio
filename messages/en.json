@@ -15,6 +15,10 @@
     "info": "Currently searching for a job opportunity in programming. Willing to learn any technology.",
     "title": "Contact"
   },
+  "GameStore": {
+    "description": "Mock E-Commerce of Games, with functional Shopping Cart (With database persistence), orders, reviews and authentication.",
+    "name": "GameStore"
+  },
   "Introduction": {
     "presentation": "Full-Stack Developer."
   },

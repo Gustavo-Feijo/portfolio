@@ -5,7 +5,9 @@ import {
   SiJest,
   SiLinkedin,
   SiNextdotjs,
+  SiPrisma,
   SiReact,
+  SiShadcnui,
   SiTailwindcss,
   SiYoutube,
 } from "react-icons/si";
@@ -56,6 +58,29 @@ const projectList: ProjectData[] = [
         icon: <TbWorld />,
         link: "https://gustavofeijo.vercel.app/br",
         text: "Website",
+      },
+    ],
+  },
+  {
+    translation: "GameStore",
+    projectImage: "GameStore.png",
+    technologies: [
+      { icon: <SiReact />, name: "React" },
+      { icon: <SiNextdotjs />, name: "Next.js" },
+      { icon: <SiTailwindcss />, name: "Tailwind" },
+      { icon: <SiShadcnui />, name: "Shadcnui" },
+      { icon: <SiPrisma />, name: "Prisma" },
+    ],
+    links: [
+      {
+        icon: <SiGithub />,
+        link: "https://github.com/Gustavo-Feijo/Gamestore",
+        text: "GitHub",
+      },
+      {
+        icon: <SiLinkedin />,
+        link: "https://www.linkedin.com/posts/gustavo-feij%C3%B3-0767ab1b0_hoje-finalizei-um-projeto-que-desenvolvi-activity-7239017334177181696-yRsH?utm_source=share&utm_medium=member_desktop",
+        text: "Linkedin",
       },
     ],
   },

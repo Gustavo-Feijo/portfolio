@@ -15,6 +15,10 @@
     "info": "Atualmente buscando uma oportunidade de emprego na área de programação, disposto a me adaptar e aprender qualquer tecnologia requerida.",
     "title": "Contatos"
   },
+  "GameStore": {
+    "description": "Mock E-Commerce de venda de jogos, com sistema de carrinho (Com persistência no banco de dados), finalização de ordens, reviews e autenticação.",
+    "name": "GameStore"
+  },
   "Introduction": {
     "presentation": "Desenvolvedor Full-Stack."
   },
