@@ -5,14 +5,14 @@
     "cienciasDate": "2023-1 --> 2026-2",
     "cienciasDesc": "Estácio, Undergraduate.",
     "desc": "Software Developer aspiring to become a Full-Stack Developer. Knowledgeable in JavaScript, TypeScript, React.js, Next.js, SQL, and ORMs.",
-    "desc2": "I started programming in C in 2022 for microcontrollers. In 2023, I began my undergraduate studies in Computer Science, focusing mainly on the basics of Java, OOP, and SQL. At the beginning of 2024, I decided to study Web Development on my own.",
+    "desc2": "I started programming in C in 2022 for microcontrollers. In 2023, I began my undergraduate studies in Computer Science, focusing mainly on the basics of Java, OOP, and SQL. At the end of 2024, I started working as a PHP developer for Conectalá.",
     "ifsc": "Electronic Technician",
     "ifscDate": "2019/1 --> 2022/2",
     "ifscDesc": "IFSC, High School/Technician.",
     "studies": "Courses"
   },
   "Contact": {
-    "info": "Currently searching for a job opportunity in programming. Willing to learn any technology.",
+    "info": "Currently in a internship at Conectalá as a PHP developer.",
     "title": "Contact"
   },
   "GameStore": {
